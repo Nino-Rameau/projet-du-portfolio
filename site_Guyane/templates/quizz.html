@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/quizz.css')}}">
+        <title>quizz</title>
+
+        <script language="javascript" type="text/javascript">
+            function quizz() 
+            {
+            if (document.getElementById("Vrai").checked)
+                {
+                alert ('Bonne réponse !');       } 
+            else { 
+                alert ('Mauvaise réponse !');    }
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+        
+        <body style="background-color:rgb(104, 233, 126);">
+
+        <h1> Quizz : </h1> <br>
+        <h2>Il y a une seule réponse possible par question.</h2> <br> <br>
+
+        <h3>
+            <form id="form1" name="form1" method="get" action="quizz.html" onsubmit= "quizz();">
+                <p>Question 1 : Il y a plus de 95% de forêt en Guyane.</p> <br>
+                    <input type="radio" name="Q1" value="Vrai" id="Vrai" /> Vrai
+                    <input type="radio" name="Q1" value="Faux" id="Faux" /> Faux <br>
+                    <div><img src="{{url_for('static', filename='img/Q1.jpg')}}"></div>
+                    <input type="submit" value="Valider" /> <br><br>
+
+                <p>Question 2 : La Guyane est une île. </p> <br>
+                    <input type="radio" name="Q2" value="Vrai" id="Faux" /> Vrai
+                    <input type="radio" name="Q2" value="Faux" id="Vrai" /> Faux<br>
+                    <div><img src="{{url_for('static', filename='img/Q2.jpg')}}"></div>
+                    <input type="submit" value="Valider" /><br><br>
+                
+                <p>Question 3 : La Guyane est le plus grand département français.</p> <br>
+                    <input type="radio" name="Q3" value="Vrai" id="Vrai" /> Vrai
+                    <input type="radio" name="Q3" value="Faux" id="Faux" /> Faux <br>
+                    <div><img src="{{url_for('static', filename='img/Q3.jpg')}}"></div>
+                    <input type="submit" value="Valider" />
+            </form>
+        </h3>
+
+    </body>
+</html>

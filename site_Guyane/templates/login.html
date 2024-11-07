@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}">
+        <title>Connexion</title>
+    </head>
+    <body>
+        <body style="background-color:rgb(104, 233, 126);"></body>
+        <form action="http://localhost:5000/resultat" method="POST">
+            <br><br>
+            <p>
+                <label>LOGIN</label> : <input type="text" name="login"/>
+            </p>
+            <br>
+            <p>
+                <label>PASSWORD</label> : <input type="password" name="password"/>
+            </p>
+            <br>
+            <p>
+                <input type="submit" value="Connexion"/>
+            </p>
+        </form>
+        <br><br><br><br><br>
+        <div><img src="{{url_for('static', filename='img/drapeau.jpg')}}"></div>
+    </body>
+</html>
